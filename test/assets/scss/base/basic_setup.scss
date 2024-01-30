@@ -1,0 +1,43 @@
+body{
+	margin:0px;
+	padding:0px;
+	font-family: 'Merriweather', serif;
+}
+
+*{
+	margin:0px;
+	padding:0px;
+	box-sizing:border-box;
+}
+
+img{
+	max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+	margin:0px;
+}
+
+ul,ol{
+	margin:0px;
+	padding:0px;
+}
+
+h2{
+	color:$heading-color;
+	font-family: 'Merriweather', serif;
+	font-weight:700;
+}
+
+li{
+	list-style:none;
+}
+
+a{
+	text-decoration:none;
+}
+
+a:hover{
+	text-decoration:none;
+}
+

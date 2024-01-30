@@ -1,0 +1,238 @@
+.slider{
+    position: relative;
+    background:url(../images/3.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding:150px 0px;
+    overflow: hidden;
+    z-index:9;
+    @media screen and(max-width:768px){
+        padding:50px 0px;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px){
+        padding:100px 0px;
+    }
+        &::before{
+        position: absolute;
+        content: "";
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        background: rgba(9,2,52,0.8);
+        z-index:2;
+    }
+
+    &::after{
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        left: 0;
+        top: 0;
+        background-image: -webkit-linear-gradient(rgba(13, 31, 54, 0.6) 40%, transparent);
+    }
+
+    .slide-effect{
+        position: absolute;
+        top: 0;
+        width: 100px;
+        background: rgba(0,0,0,0.2);
+        z-index: 9;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        line-height: 50px;
+        color: $color-use;
+
+        .social-media{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            ol{
+                li{
+                    transition: 0.3s;
+                    padding: 15px 20px;
+                    color: #7b7b7b;
+                    font-size: 25px;
+                    &:hover{
+                        transform: translateX(-10px);
+                    }
+                }
+            }
+        }
+    }
+
+    .head-content{
+        padding:30px 0px;
+        position:relative;
+        display:inline-block;
+        width:100%;
+        color:$color-use;
+        text-align:center;
+        z-index:3;
+        width:90%;
+        display:block;
+        margin:auto;
+        @media screen and(max-width:767.98px){
+            width:80%;
+            padding:10px 0px;
+        }
+
+        @media (min-width: 768px) and (max-width: 991.98px){
+            width:85%;
+            padding:0px 0px;
+        }
+        &::before{
+            position: absolute;
+            content: "";
+            background: url(../images/slider/shape.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            right: 48%;
+            height: 200px;
+            width: 100px;
+            bottom: -47px;
+            transform: rotate(50deg);
+        }
+
+        &::after{
+            position: absolute;
+            content: "";
+            width: 5px;
+            height: 100%;
+            background: #453e58;
+            border-radius: 20px;
+            right: 0;
+            transform: rotate(50deg);
+        }
+        h2{
+            display:block;
+            color:$color-use;
+            font-weight:600;
+            font-size:46px;
+            text-transform: capitalize;
+            line-height:70px;
+            letter-spacing:1px;
+
+            @media screen and(max-width:767.98px){
+                font-size:25px;
+                line-height:40px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991.98px){
+                font-size:35px;
+                line-height:50px;
+            }
+            &::before{
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 900px;
+                background: rgba(255,255,255,0.2);
+                border-radius: 20px;
+                transform: rotate(30deg);
+                top: -230px;
+                left:160px;
+            }
+
+            &::after{
+                position: absolute;
+                content: "";
+                width: 30px;
+                height: 900px;
+                background: rgba(255,255,255,0.2);
+                border-radius: 20px;
+                transform: rotate(30deg);
+                top: -230px;
+                left:0;
+            }
+
+            span{
+                color:$color-main;
+                font-size:80px;
+
+                @media screen and(max-width:767.96px){
+                    font-size:30px;
+                    color:$color-use;
+                }
+            }
+        }
+        p{
+            font-size:20px;
+            text-transform:capitalize;
+            font-weight:normal;
+            letter-spacing:1px;
+            margin:20px 0px;
+
+            @media screen and(max-width:767.98px){
+                font-size:18px;
+                line-height:29px;
+            }
+        }
+
+        .btn-01{
+            position: relative;
+            margin:20px 0px;
+            z-index:9;
+            display:block;
+            a{
+                display: inline-block;
+                z-index: 9;
+                opacity: 1;
+                padding: 9px 25px;
+                color:$color-sup;
+                font-size: 18px;
+                text-align: center;
+                border: 1px solid $color-sup;
+                text-transform: uppercase;
+                margin: 0 10px;
+                cursor: pointer;
+                line-height: normal;
+                position: relative;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    bottom: 6px;
+                    left: 0;
+                    -webkit-transition: width .4s;
+                    -o-transition: width .4s;
+                    transition: width .4s;
+                    height: 100%;
+                    background:$color-main;
+                    width: 0;
+                    bottom: 0;
+                    z-index: 1;
+                }
+                span{
+                    position: relative;
+                    z-index: 2;
+                }
+                &:nth-child(2){
+                    background:$color-sup;
+                    color:$color-use;
+                }
+
+                &:hover{
+                    color:$color-use;
+                        &::after{
+                            width:100%;
+                    }
+                }
+
+                @media screen and(max-width:576px){
+                    margin:10px 0px
+                }
+            }
+        }
+    }
+}
+
+.custom-container{
+    max-width:1360px;
+}

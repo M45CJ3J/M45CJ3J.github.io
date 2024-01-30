@@ -1,0 +1,248 @@
+.top-sec{
+    background:#1c1c23;
+    position: relative;
+    overflow: hidden;
+    color:$color-use;
+    font-family: 'Open Sans', sans-serif;
+    padding: 5px;
+    @media screen and(max-width:575.98px){
+        display:none;
+    }
+    .top-use-sec{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        width:100%;
+
+        .top-social{
+            position: relative;
+            @media (max-width: 767.98px){
+                display:none;
+            }
+            ul{
+                li{
+                    display: inline-block;
+                    height: 20px;
+                    background:$color-main;
+                    width: 20px;
+                    color:$color-use;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 10px;
+                    border-radius: 50px;
+                    margin: 0 5px 0 0;
+                    position: relative;
+                    z-index: 1;
+                    &:nth-child(1){
+                        background:#3b5998;
+                    }
+
+                    &:nth-child(2){
+                        background:#00acee;
+                    }
+
+                    &:nth-child(3){
+                        background:#db3236;
+                    }
+
+                    &:nth-child(4){
+                        background:#00aff0;
+                    }
+
+                    @media (max-width: 991.98px) {
+                        display:none;
+                    }
+                }
+            }
+        }
+        ol{
+            li{
+                display:inline-block;
+                font-size: 14px;
+                font-weight:400;
+                padding:8px 20px;
+                color:#949494;
+                border-right:1px solid #7d7d7d7d;
+                &:last-child{
+                    border:none;
+                }
+                &:nth-child(1){
+                    padding-left:0px;
+                }
+                i{
+                    margin-right:10px;
+                }
+
+                @media (min-width: 576px) and (max-width: 767.98px){
+                    padding:8px 10px;
+                    font-size:11px;
+                }
+            }
+        }
+    }
+}
+
+// ========main*****Nav*****========
+
+.main-nav{
+    background:#000;
+    position:relative;
+    width:100%;
+    overflow: hidden;
+    padding:12px;
+    .nav{
+        display:flex;
+        align-items:center;
+        position: relative;
+        width:100%;
+
+        @media screen and(max-width:768px){
+            display:block;
+            padding:10px 15px;
+        }
+
+        .menu-toggle{
+            height: 40px;
+            width: 40px;
+            align-items: center;
+            margin: 0px 0 0 40px;
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            right: 10px;
+            top: 7px;
+            background: #000;
+            color: #fff;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            z-index:999;
+
+            .active{
+                &::before{
+                    content:"\f00d";
+                }
+            }
+
+            &::before{
+                position:absolute;
+                content:"\f0c9";
+                font-size:25px;
+                color:$color-use;
+                font-family: "Font Awesome 5 Pro";
+
+            }
+
+            @media screen and(max-width:768px){
+                opacity:1;
+                visibility: visible;
+            }
+        }
+
+        .my-nav-items{
+            position: relative;
+            width:70%;
+            .active{
+                display:block !important;
+            }
+            @media screen and(max-width:768px){
+                width:100%;
+                display:none;
+            }
+
+            .menu{
+                display:block;
+
+                ul{
+                    li{
+                        display: inline-block;
+                        padding: 0px 30px;
+                        position: relative;
+                        @media (min-width: 768px) and (max-width: 991.98px){
+                            padding:0px 20px;
+                        }
+                        &:hover{
+                            a{
+                                @media screen and (max-width:768px){
+                                    border:none;
+                                }
+                                color:$color-sup;
+                                border-top: 3px solid $color-sup;  
+                            }
+                        }
+
+                        @media screen and(max-width:768px){
+                            display:block;
+                            padding-left:0px;
+                        }
+                        a{
+                            color:$color-use;
+                            font-size: 16px;
+                            text-transform: capitalize;
+                            padding: 11px 0px;
+                            font-weight: 600;
+                            display: block;
+                            border-top: 3px solid transparent;
+                            transition:0.6s;
+                            @media screen and (max-width:768px){
+                                border:none;
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        .logo{
+            width:30%;
+            position: relative;
+            display:block;
+            @media screen and(max-width:768px){
+                width:100%;
+            }
+            h1{
+                font-size:30px;
+                font-weight: 600;
+                color:$color-use;
+                text-transform:uppercase;
+                letter-spacing:1px;
+                position: relative;
+                padding:0 0 0 40px;
+                z-index:9;
+
+                &::before{
+                    position: absolute;
+                    content: "";
+                    background: url(../images/law-logo.png);
+                    top: 0;
+                    left: 0;
+                    width: 30px;
+                    height: 30px;
+                    background-repeat: no-repeat;
+                    background-position: left;
+                    filter: invert(1);
+                    z-index:8;
+                }
+
+                &::after{
+                    position: absolute;
+                    content: "";
+                    width: 151px;
+                    height: 5px;
+                    background: #000;
+                    left: 43px;
+                    /* transform: rotate(8deg); */
+                    top: 16px;
+                }
+            }
+        }
+    }
+}
+
+.menu-toggle.active::before {
+    content: "\f00d" !important;
+}
+
+.my-nav-items.active{
+    display:block !important;
+}
